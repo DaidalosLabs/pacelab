@@ -11,17 +11,18 @@ html {
 .intro-animation {
   background-color: #060608;
   animation: fade-out 1.0s ease-in 2s forwards;
-  }
+}
+
 .intro-animation {
   display: flex;
-    align-items: center;
+  align-items: center;
   justify-content: center;
-  gap: 0px;
   position: fixed;
   inset: 0;
   z-index: 100;
- 
+
 }
+
 /* Intro Animation Fadeout Description */
 
 @keyframes fly-in {
@@ -29,6 +30,7 @@ html {
     opacity: 0;
     transform: translate(-45%, 55%) scale(0.6) rotate(-28deg);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -36,7 +38,7 @@ html {
 }
 
 @keyframes pace-fade-in {
-   
+
   to {
     opacity: 1;
   }
@@ -47,10 +49,11 @@ html {
     opacity: 0;
     transform: translateY(-50px);
   }
+
   to {
     opacity: 1;
     transform: none;
-      }
+  }
 }
 
 @keyframes subtext-spread {
@@ -58,10 +61,11 @@ html {
     opacity: 0;
     letter-spacing: -1px;
   }
+
   to {
     opacity: 1;
-    letter-spacing : 4px;
-      }
+    letter-spacing: 4px;
+  }
 }
 
 @keyframes fade-out {
@@ -69,10 +73,11 @@ html {
     transform: none;
     opacity: 1;
   }
+
   to {
     transform: translateY(-100%);
     opacity: 0;
-      }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -89,11 +94,11 @@ html {
   letter-spacing: 1.5px;
   animation: pace-fade-in 0.6s ease-out 0.8s forwards;
   opacity: 0;
-  }
+}
 
 .logo-animation-emphasis {
   color: #FF6B00;
-  display:inline-block;
+  display: inline-block;
   animation: lab-fade-in 0.5s ease-out 1s forwards;
   opacity: 0;
 }
@@ -114,4 +119,22 @@ html {
   opacity: 0;
   filter: drop-shadow(0px 0px 10px rgba(255, 107, 0, 0.5));
   animation: fly-in 0.7s ease-out 0.2s forwards;
-   }
+}
+
+@media (max-width: 600px) {
+  .logo-animation-text
+  {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .intro-animation-subtext
+  {
+    font-size: 9px;
+  }
+  .animation-logo 
+  {
+    width: 125px;
+    height: 125px;
+  }
+
+}
