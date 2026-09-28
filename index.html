@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PACELAB - Berechnen Sie Ihren Pace-Wert für das Laufen.">
+    <meta name="keywords" content="PACELAB,Pace Rechner, Laufen, Pace berechnen, Laufgeschwindigkeit">
+    <meta name="author" content="Nick">
+    <title>PACELAB</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Intro Animation -->
+    <div class="intro-animation" aria-hidden="true">
+        <div class="intro-animation-content">
+            <img src="images/figure_orange.svg" alt="" class="animation-logo" width="50" height="50">
+            <div class="logo-animation-text">Pacelab</div>
+            <span class="logo-animation-subtext">Run · Measure · Rise</span>
+        </div>
+    </div>
+    <header>
+        <a href="index.html">
+            <img src="images/logo.png" alt="" class="logo" width="50" height="50">
+            <span class="logo-text">PACELAB</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#calculator">Rechner</a></li>
+                <li><a href="#trainingszonen">Trainingszonen</a></li>
+                <li><a href="#wettkampf">Wettkampf</a></li>
+            </ul>
+            <button type="button" class="Login-button">Login</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1 class="hero-title">Dein Tempo. <br>Deine Geschwindigkeit - Auf die Sekunde.</h1>
+            <p class="hero-description">Distanz und Zeit eingeben, Pace erhalten. PACELAB rechnet deine Kilometerzeit,
+                Geschwindigkeit und Zielzeiten für jede Strecke</p>
+            <a href="#calculator" class="hero-button">Pace berechnen →</a>
+        </section>
+
+        <section id="calculator" class="calculator" data-calculator>
+            <h2 id="pace-heading">Pace-Rechner</h2>
+            <p>Wähle eine Strecke oder gib deine Distanz ein.</p>
+            <!-- Prevalue Felder-->
+            <fieldset class="calculator-pre-value-input">
+                <input type="radio" id="distanz-5" name="distanz-input" value="5">
+                <label for="distanz-5">5k</label>
+                <input type="radio" id="distanz-10" name="distanz-input" value="10" checked>
+                <label for="distanz-10">10k</label>
+                <input type="radio" id="distanz-halbmarathon" name="distanz-input" value="21.0975">
+                <label for="distanz-halbmarathon">Halbmarathon</label>
+                <input type="radio" id="distanz-marathon" name="distanz-input" value="42.195">
+                <label for="distanz-marathon">Marathon</label>
+            </fieldset>
+            <!-- Distanz Eingabefeld -->
+            <div class="calculator-distance-input">
+                <label for="distanz">Distanz (km)</label>
+                <input type="number" id="distanz" name="distanz" min="0.01" step="0.01" value="10" required>
+            </div>
+            <!-- Zeit Eingabefelder -->
+            <fieldset class="calculator-time-input">
+                <legend>Zeit</legend>
+                <input type="number" id="zeit-stunde" name="zeit-stunde" min="0" value="0" required>
+                <label for="zeit-stunde">Stunden</label>
+                <input type="number" id="zeit-minute" name="zeit-minute" min="0" max="59" value="50" required>
+                <label for="zeit-minute">Minuten</label>
+                <input type="number" id="zeit-sekunde" name="zeit-sekunde" min="0" max="59" value="0" required>
+                <label for="zeit-sekunde">Sekunden</label>
+            </fieldset>
+            <!-- Ergebnisbereich -->
+            <div id="ergebnis">
+                <label for="pace-output">Deine Pace:</label>
+                <output id="pace-output" name="pace-output" for="distanz zeit-stunde zeit-minute zeit-sekunde"></output>
+            </div>
+        </section>
+        <!-- Trainingszonen Section  --> <!-- Add automatic adjusted fields-->
+        <section id="trainingszonen" class="trainingszonen">
+            <h2>Trainingszonen</h2> <!-- Calculate each running zone -->
+            <div id="trainingszonen-ergebnis">
+                <label for="pace-zones-1-2">Zone 1-2 <span class="zone-description">Easy Run</span></label>
+                <output id="pace-zones-1-2" name="pace-zones-1-2"
+                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span
+                    class="zone-einheit">min/km</span>
+                <label for="pace-zones-3">Zone 3 <span class="zone-description">Tempo Run</span></label>
+                <output id="pace-zones-3" name="pace-zones-3"
+                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span class="zone-einheit">min/km</span>
+                    <label for="pace-zones-4">Zone 4 <span class="zone-description">Threshold Run</span></label>
+                <output id="pace-zones-4" name="pace-zones-4"
+                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span
+                    class="zone-einheit">min/km</span>
+                <label for="pace-zones-5">Zone 5 <span class="zone-description">Interval</span></label>
+                <output id="pace-zones-5" name="pace-zones-5"
+                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span
+                    class="zone-einheit">min/km</span>
+            </div>
+        </section>
+        <section id="wettkampf" class="wettkampf">
+            <h2>Wettkampf</h2>
+            <h3>Lauf dein nächstes PB.</h3>
+            <p>Zielzeit eingeben, Renntempo erhalten, Wettkampf vorbereiten</p>
+        </section>
+    </main>
+    <footer>
+        <span>&copy; 2026 DaidalosLabs</span>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+            <a href="aboutme.html">Über mich</a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
