@@ -20,9 +20,9 @@
 <body>
     <!-- Intro Animation -->
     <div class="intro-animation" aria-hidden="true">
+        <img src="images/figure_orange.svg" alt="" class="animation-logo">
         <div class="intro-animation-content">
-            <img src="images/figure_orange.svg" alt="" class="animation-logo" width="50" height="50">
-            <div class="logo-animation-text">Pacelab</div>
+            <div class="logo-animation-text">Pace<span class="logo-animation-emphasis">lab</span></div>
             <span class="logo-animation-subtext">Run · Measure · Rise</span>
         </div>
     </div>
@@ -81,7 +81,7 @@
             <!-- Ergebnisbereich -->
             <div id="ergebnis">
                 <label for="pace-output">Deine Pace:</label>
-                <output id="pace-output" name="pace-output" for="distanz zeit-stunde zeit-minute zeit-sekunde"></output>
+                <output id="pace-output" for="distanz zeit-stunde zeit-minute zeit-sekunde"></output>
             </div>
         </section>
         <!-- Trainingszonen Section  --> <!-- Add automatic adjusted fields-->
@@ -94,8 +94,9 @@
                     class="zone-einheit">min/km</span>
                 <label for="pace-zones-3">Zone 3 <span class="zone-description">Tempo Run</span></label>
                 <output id="pace-zones-3" name="pace-zones-3"
-                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span class="zone-einheit">min/km</span>
-                    <label for="pace-zones-4">Zone 4 <span class="zone-description">Threshold Run</span></label>
+                    for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span
+                    class="zone-einheit">min/km</span>
+                <label for="pace-zones-4">Zone 4 <span class="zone-description">Threshold Run</span></label>
                 <output id="pace-zones-4" name="pace-zones-4"
                     for="distanz zeit-stunde zeit-minute zeit-sekunde"></output> <span
                     class="zone-einheit">min/km</span>
