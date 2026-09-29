@@ -1,3 +1,4 @@
+/* HTML-Font */
 html {
   font-family: "Google Sans", sans-serif;
   font-optical-sizing: auto;
@@ -7,7 +8,7 @@ html {
     "GRAD" 0;
   scroll-behavior: smooth;
 }
-
+/* intro-design + animation */
 .intro-animation {
   background-color: #060608;
   animation: fade-out 1.0s ease-in 2s forwards;
@@ -23,7 +24,7 @@ html {
 
 }
 
-/* Intro Animation Fadeout Description */
+/* Anmiation keyframe description */
 
 @keyframes fly-in {
   from {
@@ -79,13 +80,13 @@ html {
     opacity: 0;
   }
 }
-
+/* media preference reduce motion - disablement of intro*/
 @media (prefers-reduced-motion: reduce) {
   .intro-animation {
     display: none;
   }
 }
-
+/* intro desing */
 .logo-animation-text {
   color: white;
   font-size: 64px;
@@ -121,20 +122,45 @@ html {
   animation: fly-in 0.7s ease-out 0.2s forwards;
 }
 
+/* resposive design */
 @media (max-width: 600px) {
-  .logo-animation-text
-  {
+  .logo-animation-text {
     font-size: 24px;
     font-weight: 600;
   }
-  .intro-animation-subtext
-  {
+
+  .logo-animation-subtext {
     font-size: 9px;
   }
-  .animation-logo 
-  {
+
+  .animation-logo {
     width: 125px;
     height: 125px;
   }
+}
 
+/* header + nav bar */
+.website-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body {
+background: linear-gradient(to bottom, #F0580E, #9A2E07, #060608 );
+background-repeat: no-repeat;
+background-size: auto 325px;
+}
+
+.logo {
+  height: 35px;
+  width: 35px;
+  padding-left: 15px;
+  padding-right: 5px;
+}
+
+.logo-text {
+ color:white;
+ font-size: 24px;
+ font-weight: 700;
+ line-break: auto;
 }
